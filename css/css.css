@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+.box {
+    width: 186px;
+    height: 124px;
+    position: relative;
+}
+
+.imgbox {
+
+    font-size: 0;
+    /*解决inline-block的空隙问题*/
+}
+
+/*图片的显示控制*/
+img {
+    width: 186px;
+    height: 124px;
+    display: block;
+    /*可以解决一些样式不一致问题*/
+    border: none;
+}
+/*数字导航容器定位*/
+.points {
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    font-size: 0;
+}
+
+.points ul {
+    list-style: none;
+}
+
+.points li {
+    border-left: 1px solid #fff;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+
+/*数字导航正常样式*/
+.points a {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-decoration: none;
+    background-color: orange;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/*show控制图片显示，hide控制图片隐藏*/
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+/*数字导航鼠标滑过效果*/
+.points a:hover, .points .active {
+    background-color: #FF4500;
+}
+
+/*左右两按钮正常展示效果*/
+.prev, .next {
+    width: 24px;
+    height: 36px;
+    text-align: center;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d000000', endColorstr='#4d000000', GradientType=0);
+    line-height: 36px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*左右两按钮滑过效果*/
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, .5);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#80000000', GradientType=0);
+}
+
+/*左右两个按钮设置垂直居中*/
+
+.prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -18px;
+}
+.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -18px;
+}
